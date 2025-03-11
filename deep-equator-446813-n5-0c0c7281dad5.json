@@ -1,0 +1,20 @@
+{
+  "sourceType": "google_workspace",
+  "project_id": "deep-equator-446813-n5",
+  "private_key_id": "0c0c7281dad5283ce810a9a064c8bc7e2f8491e3",
+  "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0eHR/cHai1rue\nxNqRU1SGVGZzA/nOMkRlWnVivvHEuVGl00UImIHFhUl6Suu+ibCwYiLqG4BYkfVp\nGRtxI1LjJEhrwUo1x5Efdp3xpEjjSexeLAtR/IekEYLkyMp83QKFlvMXcA2kpOBi\nnGeBZvZj9kpXl59rY7VWE1URjN608C5BMrC1D8xUGbW6RapcpUrt8BENQBXAO7XB\nKHCmXOKpkLNEGFtVig6BVOqroDqCod4Jzj4ELpAJCeC4MWq/U0DbXGEP/GEXPZCJ\nSjW8srmQ2Jr/9YO3eNe4w6H4q9lFLixdCbVoryiODhb67BNAAgEgrtf7T7aGVXPq\nvNHsxqMHAgMBAAECggEAAYCNK7BidGmIJ0KpNRN1/SY/sg5i6mn1sshFeNxxA7ut\nJ82x4efvEJdS7L8p5iycOWOfucYf09znJ4hLd64dFwHqzmbN+NOf7ByfJO9Cog2v\n93qzX2vULzPsHH5lXROz3SvL+zJ2EpxCt99oZyXVwDBBHyiGbaznSf+gMiSzh9sC\nWGXcd97npW4RSHo5w14Vo20ck11SfG8JJoyrTn5SVuim3dvZPyQv5cJ69zvZtI8x\nRDMLJ9cbUuRa3LSJo/TcFkR8XHzF5i1p6RWn6aTDVe+4q4TUtLMmENKMWL+hE3Gn\nAs8BTBShiunxn+87yXrk0monGNcBpSfOvROdN4W/nQKBgQDpdTwu/oPEH+KmcxhL\nlFS3UcLucvzZyI6awczeFdCgTwS7IQoOlrRbDK3jRW2W7pwV21gKyiYHHJmLjH6x\nXtDH/BbIoNX7JqIvTcTQ15Rz8IixFofPApNAzpdtdpEhvGhqYpJ6Yef3RAR1d969\nbq55hPrUEClHDaLH8tmoBz67mwKBgQDF5XFKOj5bHKZqxPGoLu1Rbz3LUzZmFXdU\n6lL1RlbWiuNdB7xbxH9VJwql65BKsHZ+jZU91x+wHDkSRJ4lyWWXFPjOLlMIzufV\nYjTpVH5AmuN08eAbs8q3Ey609J+cC9VD/b5HbC3o/zEIlD9yHBgFtB5OEg2R43wM\ndm5oA5T7BQKBgExoAyd6QxPIP7ysRJJP3J4W006JMbnxSsLZlLxGtX4R/oFkIc9+\ngU6fSrXsPh68vzbkD9+QI3wGXzZt5/UTDA+3sJk/EmldTo1ezYBwXfTID2St9ArL\nU/hM5QB9YqiA6kePNVN6gZnKmA7+CVdERzQcUp9fHrNTgiggkh3NKTnrAoGBAJ09\nfrPU7YDlldFWJRFWIBjJg9cPijS4r7WX7kyXFB6qApgDsoVT7zzQpaRKNL8z0SMj\nCkc1rCb5ddtvDB3IFWFjN4JTyoRAKnMg8hvHl/1rVHmySjiYteSbaEw95qhNuqmo\nb00+xofQZLyFVpgrfGbjxASSUZfuob0hSP56giClAoGALdBMSCfWxdGpo+8vmONS\ny/q4niX0I0oSTSPSyiRr9YFU3fXr4LSur4OqGEwmh/85fdswfwlFUB7BRT4Xtb9v\nsFfs53sUcr+1AZ0ek32XV2ycZrV9rhnBxcgBVZw91TFD7Wrkr3k9ljhyy3G0U9cG\nHs6uybWPVQ3xboAbRwRdDG0=\n-----END PRIVATE KEY-----\n",
+  "credentials":{
+    "clientEmail": "test-694@deep-equator-446813-n5.iam.gserviceaccount.com",
+    "client_id": "106744729545441171193",
+    "adminEmail": "erjonparashumti@gmail.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/admin.reports.audit.readonly"
+    ]
+  },
+  "logFetchInterval": 300,
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-694%40deep-equator-446813-n5.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
