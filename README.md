@@ -3,14 +3,6 @@
 ## Overview
 This service integrates with Google Workspace Admin SDK to collect and forward logs. It features automatic log collection, secure credential storage, and robust error handling with monitoring capabilities.
 
-## Features
-- 🔐 Secure storage of Google Workspace credentials
-- 📊 Periodic log collection with configurable intervals
-- 🔄 Automatic retry mechanism for failed requests
-- 📈 Real-time monitoring with Elasticsearch and Kibana
-- 🐳 Docker-ready deployment
-- ☁️ Cloud-deployment ready with Kubernetes support
-
 ## Tech Stack
 - Node.js
 - Fastify
@@ -160,19 +152,6 @@ terraform apply
 - **Storage Layer**: MongoDB for source configuration
 - **Monitoring Layer**: Elasticsearch/Kibana for metrics
 - **Security Layer**: Encryption for sensitive data
-
-## Contributing
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
-
-## License
-ISC
-
-## Support
-For support, please open an issue in the repository.
 
 # Backend Challenge: Google Workspace Event Integration
 
