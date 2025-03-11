@@ -9,7 +9,7 @@ This challenge will test your ability to **integrate with a cloud event source**
 3. **Processes and forwards logs** to a specified callback URL.
 4. **Handles edge cases** like API rate limits, failures, and credential expiration.
 
-If you complete the challenge successfully, you’ll get a chance to talk with our team at Cybee.ai!
+If you complete the challenge successfully, you'll get a chance to talk with our team at Cybee.ai!
 
 ---
 
@@ -114,5 +114,9 @@ Your system should properly handle:
 2. Add a `README.md` with setup and usage instructions.
 3. Submit a pull request.
 
-If your solution meets the challenge requirements, we’ll reach out to schedule a conversation. Looking forward to seeing your work!
+If your solution meets the challenge requirements, we'll reach out to schedule a conversation. Looking forward to seeing your work!
+
+# Log Collection Challenge
+
+## Structure
 
