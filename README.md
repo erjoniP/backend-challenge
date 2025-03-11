@@ -1,3 +1,179 @@
+# Google Workspace Log Collection Service
+
+## Overview
+This service integrates with Google Workspace Admin SDK to collect and forward logs. It features automatic log collection, secure credential storage, and robust error handling with monitoring capabilities.
+
+## Features
+- 🔐 Secure storage of Google Workspace credentials
+- 📊 Periodic log collection with configurable intervals
+- 🔄 Automatic retry mechanism for failed requests
+- 📈 Real-time monitoring with Elasticsearch and Kibana
+- 🐳 Docker-ready deployment
+- ☁️ Cloud-deployment ready with Kubernetes support
+
+## Tech Stack
+- Node.js
+- Fastify
+- MongoDB
+- Redis
+- Elasticsearch & Kibana
+- Docker & Docker Compose
+
+## Prerequisites
+- Docker and Docker Compose
+- Node.js 20 or later
+- Google Workspace Admin Account
+- MongoDB
+- Redis
+
+## Quick Start
+
+1. Clone the repository and navigate to the backend directory:
+```bash
+git clone <repository-url>
+cd <repository-name>/backend
+```
+
+2. Create a .env file:
+```bash
+cp .env.example .env
+```
+
+Configure the following variables:
+```env
+MONGO_URI=mongodb://mongodb:27017/backendchallenge
+REDIS_URL=redis://redis:6379
+ENCRYPTION_SECRET=your-secure-encryption-key
+ELASTIC_URL=http://elasticsearch:9200
+PORT=3000
+```
+
+3. Start the application using Docker:
+```bash
+docker compose up --build
+```
+
+The application will be available at:
+- API: http://localhost:3000
+- Kibana: http://localhost:5601
+- Elasticsearch: http://localhost:9200
+
+## API Documentation
+
+### Add New Source
+```bash
+POST /api/add-source
+```
+Request body:
+```json
+{
+  "sourceType": "google_workspace",
+  "credentials": {
+    "clientEmail": "service-account@your-domain.com",
+    "privateKey": "-----BEGIN PRIVATE KEY-----\n...",
+    "scopes": ["admin.googleapis.com"]
+  },
+  "logFetchInterval": 300,
+  "callbackUrl": "https://your-webhook.com/logs"
+}
+```
+
+### List Sources
+```bash
+GET /api/sources
+```
+
+### Remove Source
+```bash
+DELETE /api/remove-source/:id
+```
+
+## Monitoring
+
+### Metrics Available in Kibana
+- API Response Times
+- Log Collection Success Rate
+- Error Rates
+- Number of Logs Collected
+- Source Health Status
+
+### Setting up Kibana Dashboards
+1. Access Kibana at http://localhost:5601
+2. Go to Stack Management > Index Patterns
+3. Create a new index pattern for "app-metrics*"
+4. Navigate to Dashboards to create visualizations
+
+## Error Handling
+The service implements several retry mechanisms:
+- API Rate Limiting: Exponential backoff
+- Failed Webhook Deliveries: 5 retry attempts
+- Connection Issues: Automatic reconnection
+- Credential Expiration: Automatic notification
+
+## Development
+
+### Local Setup
+```bash
+# Install dependencies
+npm install
+
+# Start MongoDB
+docker compose up mongodb
+
+# Start Redis
+docker compose up redis
+
+# Start the application
+npm start
+```
+
+### Running Tests
+```bash
+# Generate test metrics
+node test/generate-metrics.js
+```
+
+## Deployment
+
+### Docker Deployment
+```bash
+docker compose up --build
+```
+
+### Kubernetes Deployment
+```bash
+# Apply Kubernetes configurations
+kubectl apply -f k8s/deployment.yaml
+```
+
+### Cloud Deployment (AWS)
+The project includes Terraform configurations for AWS deployment:
+```bash
+cd terraform
+terraform init
+terraform apply
+```
+
+## Architecture
+- **API Layer**: Fastify for handling HTTP requests
+- **Queue Layer**: BullMQ/Redis for job scheduling
+- **Storage Layer**: MongoDB for source configuration
+- **Monitoring Layer**: Elasticsearch/Kibana for metrics
+- **Security Layer**: Encryption for sensitive data
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+ISC
+
+## Support
+For support, please open an issue in the repository.
+
 # Backend Challenge: Google Workspace Event Integration
 
 ## Introduction
