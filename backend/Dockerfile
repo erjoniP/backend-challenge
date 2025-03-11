@@ -1,15 +1,19 @@
 FROM node:20-alpine
 
-WORKDIR /app/backend
+# Set working directory
+WORKDIR /app
 
-# Install dependencies first (better caching)
+# Copy package files
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# Copy application code
+# Copy source code
 COPY . .
 
-# Expose ports
+# Expose port
 EXPOSE 3000
 
+# Start the application
 CMD ["npm", "start"] 

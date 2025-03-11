@@ -5,4 +5,50 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # ... rest of the file remains the same 
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongodb:27017/backendchallenge
+      - REDIS_URL=redis://redis:6379
+      - ENCRYPTION_SECRET=${ENCRYPTION_SECRET}
+      - ELASTIC_URL=http://elasticsearch:9200
+    depends_on:
+      - mongodb
+      - redis
+      - elasticsearch
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.0
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+
+volumes:
+  mongodb_data:
+  elasticsearch_data: 
